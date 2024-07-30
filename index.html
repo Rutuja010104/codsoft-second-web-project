@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="home-btn">Home</a></li>
+                <li><a href="#" id="features-btn">Features</a></li>
+                <li><a href="#" id="pricing-btn">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <h1>Welcome to QuizMaster</h1>
+            <p>Create, share, and take quizzes with ease. Our platform is designed to make learning fun and interactive.</p>
+            <button id="learn-more-btn">Learn More</button>
+            <div id="additional-content" class="hidden">
+                <p>Here's a brief info about the QuizMaster landing page:<p>
+
+                    ---
+                    
+                    <p>**Welcome to QuizMaster!** Our landing page is designed to introduce you to the ultimate quiz platform where creating, sharing, and taking quizzes is simple and enjoyable. Whether you're a student, educator, or just someone who loves to test their knowledge, QuizMaster offers a range of features to make learning interactive and fun. From our secure and fast platform to user-friendly features and detailed analytics, you'll find everything you need to enhance your learning experience. Explore our various pricing plans, read testimonials from satisfied users, and get started today by signing up through our integrated Google Form. Dive into the world of quizzes with QuizMaster and make learning an adventure!<p>
+                    
+                    ---
+                    
+                    <p>Feel free to adjust or expand on this based on the specific features and details of your platform!.</p>
+                <p>Our features include timed quizzes, instant feedback, and detailed analytics to help you improve.</p>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="hidden">
+            <h2>Features</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-lock"></i>
+                    <p>Secure</p>
+                    <p>Your data is safe with us. We use industry-standard encryption to protect your information.</p>
+                </li>
+                <li>
+                    <i class="fas fa-rocket"></i>
+                    <p>Fast</p>
+                    <p>Our platform is optimized for speed, ensuring a smooth and efficient user experience.</p>
+                </li>
+                <li>
+                    <i class="fas fa-cog"></i>
+                    <p>Easy to Use</p>
+                    <p>Creating and taking quizzes is simple and intuitive, making it accessible for everyone.</p>
+                </li>
+            </ul>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: support@quizmaster.com</p>
+                <p>Phone: 7558538305</p>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="hidden">
+            <h2>Pricing</h2>
+            <p>We offer a range of pricing options to suit your needs:</p>
+            <ul>
+                <li>
+                    <h3>Free Plan</h3>
+                    <p>Access to basic features. Ideal for personal use and small groups.</p>
+                </li>
+                <li>
+                    <h3>Pro Plan - $9.99/month</h3>
+                    <p>Includes additional features such as advanced analytics, priority support, and more.</p>
+                </li>
+                <li>
+                    <h3>Enterprise Plan - Contact Us</h3>
+                    <p>Custom solutions and pricing for large organizations and educational institutions.</p>
+                </li>
+            </ul>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: helpsupport@quizmaster.com</p>
+                <p>Phone: (987) 654-3210</p>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"QuizMaster has revolutionized the way we approach learning in our company. The quizzes are engaging and incredibly easy to create!"</p>
+                <p>- Rolex, Training Manager</p>
+            </div>
+            <div class="testimonial">
+                <p>"I love how intuitive and fast QuizMaster is. It's made testing my knowledge much more enjoyable!"</p>
+                <p>- Rohan , Student</p>
+            </div>
+            <div class="testimonial">
+                <p>"The detailed analytics provided by QuizMaster have been invaluable for tracking progress and improving our training programs."</p>
+                <p>- Sarah, HR Specialist</p>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <h2>Get Started Today!</h2>
+            <button id="sign-up-btn">Sign Up</button>
+            <div id="sign-up-content" class="hidden">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_bYoCA-RQ5KNgPKUTM7hqXHkh1AZBkAMeFNMr-66JtZWBrg/viewform?vc=0&c=0&w=1&flr=0&pli=1" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 QuizMaster</p>
+    </footer>
+
+    <script>
+        document.getElementById('learn-more-btn').addEventListener('click', function() {
+            var content = document.getElementById('additional-content');
+            content.classList.toggle('hidden');
+        });
+        document.getElementById('sign-up-btn').addEventListener('click', function() {
+            var content = document.getElementById('sign-up-content');
+            content.classList.toggle('hidden');
+        });
+        document.getElementById('features-btn').addEventListener('click', function() {
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('pricing').classList.add('hidden');
+            document.getElementById('features').classList.remove('hidden');
+        });
+        document.getElementById('pricing-btn').addEventListener('click', function() {
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('features').classList.add('hidden');
+            document.getElementById('pricing').classList.remove('hidden');
+        });
+        document.getElementById('home-btn').addEventListener('click', function() {
+            document.getElementById('features').classList.add('hidden');
+            document.getElementById('pricing').classList.add('hidden');
+            document.getElementById('home').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
